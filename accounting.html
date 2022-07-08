@@ -1,0 +1,323 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCA</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      #accounting {
+        width: 100%;
+        padding-top: 8%;
+        border-bottom: 1px solid var(--text-color);
+      }
+
+      .accounting-info {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        background-image: url("images/bg3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid var(--text-color);
+      }
+
+      .accounting-info h1 {
+        font-size: 60px;
+        font-weight: 800;
+        color: #fff;
+        position: relative;
+      }
+     
+
+      .accounting-info-text {
+        background-color: #071c2fa9;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        padding-top: 3rem;
+        padding-left: 15%;
+      }
+
+      .accounting-info p {
+        font-size: 25px;
+        line-height: 4rem;
+        color: #fff;
+      }
+
+      .accounting-text h2 {
+        font-size: 28px;
+        color: var(--main-color);
+        margin: 3rem 0;
+      }
+
+      .accounting-text p {
+        font-size: 20px;
+        line-height: 4rem;
+        color: var(--text-color);
+      }
+
+      .accounting-text {
+        padding: 3rem 15%;
+      }
+
+      .accounting-text p {
+        font-size: 20px;
+        line-height: 2rem;
+        position: relative;
+      }
+
+      .audit-services {
+        padding-left: 15%;
+        margin-top: 2rem;
+      }
+
+      .audit-services ul {
+        list-style: square;
+        flex: 1;
+        margin-right: 20px;
+        padding-left: 4rem;
+      }
+
+      .accounting-info img{
+        width: 20%;
+        opacity: .5;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+      }
+
+      @media screen and (max-width: 900px){
+        .accounting-info h1{
+          font-size: 30px;
+        }
+        .accounting-info p{
+          font-size: 18px;
+          line-height: 2rem;
+        }
+        .accounting-text h2{
+          font-size: 20px;
+        }
+      }
+
+      .audit-services ul li {
+        color: var(--text-color);
+        font-size: medium;
+      }
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+
+    <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+    <nav class="navbar" id="sidebar">
+      <img src="images/VCA.png" alt="" />
+
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="audit.html">AUDIT</a></li>
+        <li class="active"><a href="accounting.html">ACCOUNTING</a></li>
+        <li><a href="tax.html">TAX</a></li>
+        <li><a href="advisory.html">ADVISORY</a></li>
+        <li><a href="b-bbee.html">B-BBEE</a></li>
+
+        <li>
+          <a href="#" class="feat-btn"
+            >MORE SERVICES
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+
+          <ul class="feat-show2">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">CAREERS</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-------Home Section-->
+
+    <section id="accounting">
+      <div class="accounting-info">
+        <div class="accounting-info-text">
+          <h1>Accounting</h1>
+          <p>
+            We offer a broad array of accounting and <br />
+            bookkeeping services over a wide spectrum of industries.
+          </p>
+        </div>
+        <img src="images/VCA.png" alt="">
+      </div>
+
+      <div class="accounting-text">
+        <h2>Entrepreneurial / Accounting services</h2>
+        <p>
+          We at Vleikop Chartered Accountant Inc. offers a broad array of
+          accounting and bookkeeping services over a wide spectrum of
+          industries. <br />
+          <br />
+          We help businesses achieve their financial goals – ultimately saving
+          them valuable time and money. Our accounting professionals work to
+          provide tailor made accounting solutions for small, medium and large
+          enterprises to facilitate and enhance their financial growth. Our
+          flexible approach allows our accounting services team to provide
+          seamless integration with our clients and their businesses.
+        </p>
+      </div>
+
+      <div class="audit-services">
+        <h3>Full range of services includes:</h3>
+        <div class="list">
+          <ul>
+            <li>Monthly Bookkeeping</li>
+            <li>
+              Calculation, completion and submission of Income tax, VAT, PAYE,
+              <br />
+              UIF, and SDL
+            </li>
+            <li>
+              Review and analysis of Annual Financial Statements for
+              individuals, Partnership, Companies, Close Corporations and Trusts
+            </li>
+          </ul>
+
+          <ul>
+            <li>Monthly preparation of management reports</li>
+            <li>
+              Compilation of Annual Financial Statements for Individuals,
+              Partnership, Companies, Close Corporations and Trusts
+            </li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Data Capture</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>
+                Vleikop Chartered Accountant. (“VCA”) is an
+                indigenous black firm founded in the Republic of South Africa.
+                Our business activities are focused on auditing, accounting,
+                advisory and taxation services and are not restricted in nature.
+              </p>
+              <div class="social">
+                <a href=""><span class="fab fa-facebook-f"></span></a>
+                <a href="https://wa.link/5v5v6w"
+                  ><span class="fab fa-whatsapp"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <a href="https://goo.gl/maps/vyxKDAkXzGr4kFFq9">
+                  <span class="fas fa-map-marker-alt"></span
+                ></a>
+                <span class="text">593 Bengal street Centurion Laudium</span>
+              </div>
+              <div class="phone">
+                <a href="tel:0658572143">
+                  <span class="fas fa-phone-alt"></span
+                ></a>
+                <span class="text">+27 658 572 143</span>
+              </div>
+              <div class="email">
+                <a href="mailto:dmngwasha@gmail.com"
+                  ><span class="fas fa-envelope"></span
+                ></a>
+                <span class="text">douglas@vcaccs.co.za</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required />
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn1">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <center>
+            <span class="credit"
+              >Created By
+              <a href="https://www.somdeliegraphicdesign.co.za"
+                >SomdelieGraphics</a
+              >
+              |
+            </span>
+            <span class="far fa-copyright"></span
+            ><span> 2020 All rights reserved.</span>
+          </center>
+        </div>
+      </footer>
+    </section>
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

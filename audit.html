@@ -1,0 +1,449 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCA</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      :root {
+        --main-color: #2b8c9f;
+        --second-color: #2b8c9f;
+        --sub-color: #f63a28;
+        --text-color: #071c2f;
+      }
+     
+
+      .audit-info {
+        width: 100%;
+        height: 40vh;
+        position: relative;
+        background-image: url("images/bg3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid var(--text-color);
+      }
+
+      .audit-info h1 {
+        font-size: 60px;
+        font-weight: 800;
+        color: #fff;
+        position: relative;
+      }
+    
+
+      .audit-services {
+        padding-left: 15%;
+        margin-top: 2rem;
+      }
+
+      .audit-services ul {
+        list-style: square;
+        flex: 1;
+        margin-right: 20px;
+        padding-left: 3rem;
+      }
+
+      .audit-services ul li {
+        color: var(--text-color);
+        font-size: medium;
+      }
+
+      #audit {
+        width: 100%;
+        padding-top: 8%;
+        border-bottom: 1px solid var(--text-color);
+      }
+
+      .audit-text {
+        padding: 2% 7%;
+        background-color: #e0e0e0;
+      }
+
+      .audit-text h2 {
+        font-size: 28px;
+        color: var(--main-color);
+        padding-left: 10%;
+        padding-bottom: 5px;
+        margin: 3rem 0;
+        border-bottom: 4px dotted var(--main-color);
+      }
+
+      .audit-text p {
+        font-size: 20px;
+        line-height: 4rem;
+        color: var(--text-color);
+      }
+
+      .audit-text h3 {
+        font-size: 25px;
+        margin-bottom: 2rem;
+        color: #414141;
+      }
+
+      .audit-info p {
+        font-size: 25px;
+        line-height: 4rem;
+        color: #fff;
+      }
+
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .audit-container1 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .audit-box1 {
+        width: 400px;
+        display: flex;
+        margin: 10px;
+        border: 1px solid var(--text-color);
+        padding: 20px 10px;
+        color: var(--text-color);
+        position: relative;
+      }
+
+      @media screen and (max-width: 900px){
+        .audit-info h1{
+          font-size: 30px;
+        }
+        .audit-info p{
+          line-height: 2rem;
+          font-size: 18px;
+        }
+      }
+
+      .audit-box1 p {
+        line-height: normal;
+        color: var(--text-color);
+        font-size: 14px;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        padding: 2rem;
+        margin-right: 1.5rem;
+        background-color: var(--main-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 30px;
+      }
+
+      .audit-box1:hover .icon {
+        background-color: transparent;
+        color: var(--main-color);
+        border: 1px solid var(--main-color);
+      }
+
+      .audit-info-text{
+        background-color: #071c2fa9;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        padding-top: 3rem;
+        padding-left: 15%;
+      }
+
+      .audit-info img{
+        width: 30%;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+      }
+    </style>
+
+    <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+    <nav class="navbar" id="sidebar">
+      <img src="images/VCA.png" alt="" />
+
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="about.html">ABOUT</a></li>
+        <li class="active"><a href="audit.html">AUDIT</a></li>
+        <li><a href="accounting.html">ACCOUNTING</a></li>
+        <li><a href="tax.html">TAX</a></li>
+        <li><a href="advisory.html">ADVISORY</a></li>
+        <li><a href="b-bbee.html">B-BBEE</a></li>
+
+        <li>
+          <a href="#" class="feat-btn"
+            >MORE SERVICES
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+
+          <ul class="feat-show2">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">CAREERS</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-------Home Section-->
+
+    <section id="audit">
+      <div class="audit-info">
+        <div class="audit-info-text">
+        <h1>Audit</h1>
+        <p>
+          Our Audit approach emphasizes adding value to <br />
+          our clients by enhancing quality and productivity.
+        </p>
+
+      </div>
+      <img src="images/VCA.png" alt="">
+      </div>
+
+      <div class="audit-text">
+        <h2>Auditing</h2>
+
+        <div class="audit-container1">
+          <div class="audit-box1">
+            <div class="icon"><i class="fa-solid fa-paper-plane"></i></div>
+
+            <div class="audit-text1">
+              <h3>Performance Driven</h3>
+              <p>
+                Our Audit services go beyond merely meeting statutory
+                requirements. We help our clients enhance their performance. We
+                listen to their needs, think about the business implications and
+                tailor solutions accordingly. We are equipped to handle the
+                weight of responsibility that comes with assessing and managing
+                enterprise risks.
+              </p>
+            </div>
+          </div>
+          <div class="audit-box1">
+            <div class="icon"><i class="fa-solid fa-paper-plane"></i></div>
+
+            <div class="audit-text1">
+              <h3>Strong Reputation</h3>
+              <p>
+                Vleikop Chartered and Accountant Inc. Incorporated has a long standing
+                reputation for providing an efficient risk based Audit service.
+                Our Audit approach emphasizes adding value to our clients by
+                enhancing quality and productivity.
+              </p>
+            </div>
+          </div>
+          <div class="audit-box1">
+            <div class="icon"><i class="fa-solid fa-paper-plane"></i></div>
+
+            <div class="audit-text1">
+              <h3>Adherence To Standards</h3>
+              <p>
+                We offer this service in accordance with International Auditing
+                Standards which are driven by our values and as required by the
+                South African Institute of Chartered Accountants (SAICA) and
+                Independent Regulatory Body for Auditors (IRBA), ensuring an
+                audit of the highest quality.
+              </p>
+            </div>
+          </div>
+          <div class="audit-box1">
+            <div class="icon"><i class="fa-solid fa-paper-plane"></i></div>
+
+            <div class="audit-text1">
+              <h3>Client Centric</h3>
+              <p>
+                Our Audit professionals at Mrwebi Auditors and Accountants
+                Incorporated take the time to understand our client’s business
+                as well as the industries in which they operate to identify
+                major risks and opportunities over and above performance of the
+                traditional financial reporting function.
+              </p>
+            </div>
+          </div>
+          <div class="audit-box1">
+            <div class="icon"><i class="fa-solid fa-paper-plane"></i></div>
+
+            <div class="audit-text1">
+              <h3>Quality Assurance</h3>
+              <p>
+                Our Assurance professionals gather information during Mrwebi
+                Auditors and Accountants Incorporated audit in order to
+                understand our client’s business, internal controls and risk
+                spectrum.
+              </p>
+            </div>
+          </div>
+          <div class="audit-box1">
+            <div class="icon"><i class="fa-solid fa-paper-plane"></i></div>
+            <div class="audit-text1">
+              <h3>Reliable Methods</h3>
+              <p>
+                Our methods enable our clients to meet the growing demand for
+                enhanced disclosure and accountability. We work closely with our
+                clients, yet independently, and encourage open communication,
+                implementing techniques that meet the needs of each unique
+                organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="audit-services">
+        <h3>Full range of services includes:</h3>
+        <div class="list">
+          <ul>
+            <li>Forensic audit and litigation supports</li>
+            <li>Internal audits</li>
+            <li>Attorney’s trust funds</li>
+            <li>Estate Agents trust funds</li>
+            <li>Retirement Funds Audits.</li>
+            <li>Statutory audits and financial reporting</li>
+            <li>Performance Audits</li>
+            <li>Information Technology Security Solutions</li>
+           
+          </ul>
+
+          <ul>
+            <li>Verifications and certifications for legal and other purposes</li>
+            <li>IFRS Compliance/Accounting Technical</li>
+            <li>Integrated Reporting</li>
+            <li>Sustainability Reporting</li>
+            <li>Agreed Upon procedures</li>
+            <li>Financial Review Engagements IT governance
+            </li>
+            <li>Information System Assurance</li>
+            <li>ERP Solutions</li>
+            <li>Data Analytics and Continuous Auditing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>
+                Vleikop Chartered Accountant. (“VCA”) is an
+                indigenous black firm founded in the Republic of South Africa.
+                Our business activities are focused on auditing, accounting,
+                advisory and taxation services and are not restricted in nature.
+              </p>
+              <div class="social">
+                <a href=""><span class="fab fa-facebook-f"></span></a>
+                <a href="https://wa.link/5v5v6w"
+                  ><span class="fab fa-whatsapp"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <a href="https://goo.gl/maps/vyxKDAkXzGr4kFFq9">
+                  <span class="fas fa-map-marker-alt"></span
+                ></a>
+                <span class="text">593 Bengal street Centurion Laudium</span>
+              </div>
+              <div class="phone">
+                <a href="tel:0658572143">
+                  <span class="fas fa-phone-alt"></span
+                ></a>
+                <span class="text">+27 658 572 143</span>
+              </div>
+              <div class="email">
+                <a href="mailto:dmngwasha@gmail.com"
+                  ><span class="fas fa-envelope"></span
+                ></a>
+                <span class="text">douglas@vcaccs.co.za</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required />
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn1">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <center>
+            <span class="credit"
+              >Created By
+              <a href="https://www.somdeliegraphicdesign.co.za"
+                >SomdelieGraphics</a
+              >
+              |
+            </span>
+            <span class="far fa-copyright"></span
+            ><span> 2020 All rights reserved.</span>
+          </center>
+        </div>
+      </footer>
+    </section>
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

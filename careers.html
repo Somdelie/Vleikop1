@@ -1,0 +1,442 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCA</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      :root {
+        --main-color: #2b8c9f;
+        --second-color: #2b8c9f;
+        --sub-color: #f63a28;
+        --text-color: #071c2f;
+      }
+
+      .advisory-info {
+        width: 100%;
+        height: 40vh;
+        background-image: url("images/bg3.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 2px solid var(--text-color);
+      }
+
+      .advisory-info-text {
+        background-color: rgba(0, 0, 0, 0.514);
+        width: 100%;
+        height: 100%;
+        padding-left: 15%;
+        padding-top: 3rem;
+      }
+
+      .advisory-info h1 {
+        font-size: 60px;
+        font-weight: 800;
+        color: #fff;
+        position: relative;
+      }
+      .advisory-info h1::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20%;
+        height: 8px;
+        background-color: var(--main-color);
+      }
+
+      #advisory {
+        width: 100%;
+        padding-top: 7%;
+        border-bottom: 1px solid var(--text-color);
+      }
+
+      .advisory-info p {
+        font-size: 20px;
+        line-height: 3rem;
+        color: #fff;
+      }
+      .advisory-services{
+        margin: 3rem;
+      }
+      .advisory-services h3{
+        margin: auto;
+        border-bottom: 4px dotted var(--main-color);
+        width: 280px;
+      }
+
+      .services-tabs {
+        width: 85%;
+        height: 270px;
+        overflow: hidden;
+        display: flex;
+      }
+
+      @media screen and (max-width: 900px){
+
+        .advisory-info-text {
+        padding-left: 5%;
+      }
+
+        .services-tabs{
+            display: block;
+            height: 600px;
+            width: 100%;
+        }
+        .advisory-services{
+        margin: 2rem 0;
+      }
+        .tabsGroup {
+        display: block;
+        width: 100%;
+        font-weight: 800;
+        font-size: 22px;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+      .advisory-info h1 {
+        font-size: 30px;
+        font-weight: 600;
+        color: #fff;
+        position: relative;
+      }
+      .advisory-info p {
+        font-size: 18px;
+        line-height: 2rem;
+        color: #fff;
+      }
+      }
+
+      .tabsGroup {
+        display: block;
+        width: 300px;
+        font-weight: 800;
+        font-size: 22px;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+      }
+
+      .tabsGroup .tabs {
+        padding: 15px 0 15px 1rem;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        flex: 1;
+        color: var(--main-color);
+        border-top: 1px solid var(--main-color);
+      }
+
+      .tabsGroup .tabs:last-child {
+        border-bottom: 1px solid var(--main-color);
+      }
+
+      .tabsGroup .tabs i {
+        margin-right: 10px;
+      }
+
+      .tabsGroup .active {
+        background-color: var(--main-color);
+        color: #fff;
+        border-left: 3px solid var(--sub-color);
+      }
+
+      .tabsGroup .tabs:hover {
+        background: var(--main-color);
+        color: #fff;
+      }
+
+      .contentsGroup {
+        position: relative;
+        width: 100%;
+        padding: 2rem;
+      }
+
+      .contentsGroup .contents {
+        position: absolute;
+        color: var(--text-color);
+        width: calc(100% - 40px);
+        transform: translateX(105%);
+        transition: transform 0.3s ease-out;
+      }
+
+
+      .contentsGroup .contents p {
+        font-size: 14px;
+      }
+
+      .contentsGroup .active {
+        transform: translateX(0%);
+        transition: transform 0.3s;
+        transition-delay: 0.4s;
+      }
+    </style>
+
+    <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+    <nav class="navbar" id="sidebar">
+      <img src="images/VCA.png" alt="" />
+
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="audit.html">AUDIT</a></li>
+        <li><a href="accounting.html">ACCOUNTING</a></li>
+        <li><a href="tax.html">TAX</a></li>
+        <li><a href="advisory.html">ADVISORY</a></li>
+        <li><a href="b-bbee.html">B-BBEE</a></li>
+
+        <li>
+          <a href="#" class="feat-btn"
+            >MORE SERVICES
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+
+          <ul class="feat-show2">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+        </li>
+
+        <li class="active"><a href="careers.html">CAREERS</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-------Home Section-->
+
+    <section id="advisory">
+      <div class="advisory-info">
+        <div class="advisory-info-text">
+          <h1>Careers</h1>
+          <p>
+            We are a leading African owned and managed accounting firm <br>
+            that provides a platform for African excellence and world class competitiveness <br>
+            making us big enough to provide an excellent career foundation.
+          </p>
+        </div>
+      </div>
+
+      <div class="advisory-services">
+        <h3>VCA Career Opportunities:</h3>
+
+        <div class="services-tabs">
+          <div class="tabsGroup">
+            <div class="tabs active" onclick="openTab(this,'content_1')">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> WHY CHOOSE US
+            </div>
+            <div class="tabs" onclick="openTab(this,'content_2')">
+                <i class="fa-solid fa-life-ring"></i></i>SAICA AND SAIPA TRAINING
+            </div>
+            <div class="tabs" onclick="openTab(this,'content_3')">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>  OUR COMPANY CULTURE
+            </div>
+            <div class="tabs" onclick="openTab(this,'content_4')">
+                <i class="fa-regular fa-file"></i>  HOW TO APPLY
+            </div>
+            <div class="tabs" onclick="openTab(this,'content_5')">
+                <i class="fa-regular fa-file"></i> AFTER APPLYING
+            </div>
+          </div>
+
+          <div class="contentsGroup">
+            <div class="contents active" id="content_1">
+              <p>
+                We are a leading African owned and managed accounting firm that provides
+                 a platform for African excellence and world class competitiveness,
+                  making us big enough to provide an excellent career foundation, and 
+                  small enough for you to make a difference. We believe in developing 
+                  your true potential and offering unique opportunities needed for your 
+                  personal growth and development as a trainee accountant.
+              </p>
+            </div>
+            <div class="contents" id="content_2">
+                <p> We are a registered training office for SAICA and SAIPA.
+                We pride ourselves in the training that we provide. 
+                We believe we are a well-balanced firm who train the 
+                Chartered Accountants/ Professional Accountants of tomorrow
+                while still staying in touch with the fundamentals of life.
+                We continue to recruit graduates to train and qualify with 
+                us, our financial leaders of the future. <br> <br> 
+                We pride ourselves on our commitment to their training and
+                development. Our trainee accountants who want to train in a 
+                professional environment are offered individual attention 
+                and personal development. We are always looking for new 
+                employees who are able to perform well in a team, have a high 
+                level of ambition and drive, who take pride in themselves 
+                and their work and most importantly, see the value in what 
+                they do.
+                Assisting with the tax implications of group restructuring and
+                tax opinions. asset disposal and acquisitions; group analysis
+                and restructuring and new business operations.
+              </p>
+            </div>
+            <div class="contents" id="content_3">
+              <p>
+                At Mrwebi Auditors and Accountants Inc we embrace the different 
+                cultures and personalities that make up our staff. We pride 
+                ourselves in our teamwork, and the close relationships that 
+                develop amongst the individuals in our teams.
+              </p>
+            </div>
+            <div class="contents" id="content_4">
+              <p>
+                Should you want to apply to Mrwebi Auditors and Accountants
+                Inc you need to send in the following documents:
+              </p>
+
+              <ul style="font-weight: 600;">
+                <li>CV</li>
+                <li>ID</li>
+                <li> Full Academic Record</li>
+                <li>Matric Certificate</li>
+              </ul>
+              <p>These can be sent to abc@example.com</p>
+            </div>
+            <div class="contents" id="content_5">
+              <p>
+                If you meet the minimum requirements and are shortlisted,
+                you will be contacted for an interview.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>
+                Vleikop Chartered Accountant. (“VCA”) is an
+                indigenous black firm founded in the Republic of South Africa.
+                Our business activities are focused on auditing, accounting,
+                advisory and taxation services and are not restricted in nature.
+              </p>
+              <div class="social">
+                <a href=""><span class="fab fa-facebook-f"></span></a>
+                <a href="https://wa.link/5v5v6w"
+                  ><span class="fab fa-whatsapp"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <a href="https://goo.gl/maps/vyxKDAkXzGr4kFFq9">
+                  <span class="fas fa-map-marker-alt"></span
+                ></a>
+                <span class="text">593 Bengal street Centurion Laudium</span>
+              </div>
+              <div class="phone">
+                <a href="tel:0658572143">
+                  <span class="fas fa-phone-alt"></span
+                ></a>
+                <span class="text">+27 658 572 143</span>
+              </div>
+              <div class="email">
+                <a href="mailto:dmngwasha@gmail.com"
+                  ><span class="fas fa-envelope"></span
+                ></a>
+                <span class="text">douglas@vcaccs.co.za</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required />
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn1">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <center>
+            <span class="credit"
+              >Created By
+              <a href="https://www.somdeliegraphicdesign.co.za"
+                >SomdelieGraphics</a
+              >
+              |
+            </span>
+            <span class="far fa-copyright"></span
+            ><span> 2020 All rights reserved.</span>
+          </center>
+        </div>
+      </footer>
+    </section>
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+    <script type="text/javascript">
+      function openTab(currentTab, currentContent) {
+        let allTabs = document.getElementsByClassName("tabs");
+        let allContents = document.getElementsByClassName("contents");
+        var currentContent = document.getElementById(currentContent);
+
+        for (let i = 0; i < allTabs.length; i++) {
+          allTabs[i].classList.remove("active");
+          allContents[i].classList.remove("active");
+        }
+        currentTab.classList.add("active");
+        currentContent.classList.add("active");
+      }
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

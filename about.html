@@ -1,0 +1,549 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCA</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <style>
+      #about {
+        position: relative;
+      }
+      .about-home h1 {
+        font-size: 40px;
+      }
+
+      .overlay {
+        background-color: #0000003d;
+        width: 100%;
+        height: 100%;
+        padding-left: 15%;
+        padding-top: 3rem;
+      }
+
+      .services-tabs {
+        width: 85%;
+        height: 270px;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3rem;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      }
+      .services-tabs::before{
+        content: '';
+        width: 100px;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        
+
+    animation: content2 10s linear forwards infinite;
+      }
+      .services-tabs::after{
+        content: '';
+        width: 100px;
+        height: 4px;
+        position: absolute;
+        right: 0;
+       bottom: 0;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        
+
+    animation: content3 10s linear forwards infinite;
+      }
+
+      .tabsGroup {
+        display: flex;
+        font-weight: 800;
+        font-size: 22px;
+       
+      }
+
+      .tabsGroup .tabs {
+        padding: 10px 10px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 800;
+        flex: 1;
+        text-align: center;
+        color: #fff;
+        background-color: #4aa593;
+        
+      }
+      .tabsGroup .tabs .fa-solid {
+        margin-left: 2rem;
+        color: var(--sub-color);
+      }
+
+      .tabsGroup .active {
+        background-color: #fff;
+        color: var(--main-color);
+        border-bottom: 2px solid #949494;
+        border-left-style: groove;
+      }
+
+      .tabsGroup .tabs:hover {
+        background: #fff;
+        color: var(--main-color);
+      }
+
+      .contentsGroup {
+        padding: 2rem;
+        position: relative;
+        width: 100%;
+      }
+
+      .contentsGroup .contents {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        color: var(--text-color);
+        width: calc(100% - 40px);
+        transform: translateX(105%);
+        transition: transform 0.3s ease-out;
+      }
+
+      .contentsGroup .contents h6 {
+        padding-bottom: 26px;
+        font-size: 20px;
+      }
+
+      .contentsGroup .contents p {
+        font-size: 14px;
+      }
+
+      .contentsGroup .active {
+        transform: translateX(0%);
+        transition: transform 0.3s;
+        transition-delay: 0.4s;
+      }
+
+      @media screen and (max-width: 900px){
+        .advisory-services {
+        padding: 5px;
+      }
+
+        .services-tabs{
+            display: block;
+            height: 600px;
+            width: 100%;
+        }
+        .advisory-services{
+        margin: 2rem 0;
+      }
+        .tabsGroup {
+        display: block;
+        width: 85%;
+        font-weight: 800;
+        font-size: 22px;
+      }
+      .advisory-info h1 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        position: relative;
+      }
+      .advisory-info p {
+        font-size: 18px;
+        line-height: 2rem;
+        color: #fff;
+      }
+
+      .contentsGroup{
+        padding: .5rem;
+        height: 500px;
+        width: 100%;
+      }
+      .contentsGroup .contents{
+        width: 90%;
+        padding: 2rem;
+      }
+      }
+
+      @media screen and (max-width: 900px) {
+        #about .about-info p {
+          font-size: 12px;
+          text-align: justify;
+          font-weight: 600;
+          margin-top: 20px;
+        }
+        #about .about-info {
+          width: 700px;
+          max-width: 93%;
+          margin: 1rem;
+          padding: 1rem;
+        }
+        .about-home p {
+          font-size: 18px;
+          line-height: 2rem;
+        }
+        .about-home h1 {
+          font-size: 25px;
+        }
+      }
+      .about-home .overlay {
+        background-color: rgba(0, 0, 0, 0.575);
+      }
+
+
+    </style>
+
+    <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+    <nav class="navbar" id="sidebar">
+      <img src="images/VCA.png" alt="" />
+
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="active"><a href="about.html">ABOUT</a></li>
+        <li><a href="audit.html">AUDIT</a></li>
+        <li><a href="accounting.html">ACCOUNTING</a></li>
+        <li><a href="tax.html">TAX</a></li>
+        <li><a href="advisory.html">ADVISORY</a></li>
+        <li><a href="b-bbee.html">B-BBEE</a></li>
+
+        <li>
+          <a href="#" class="feat-btn"
+            >MORE SERVICES
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+
+          <ul class="feat-show2">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">CAREERS</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-------Home Section-->
+
+    <section id="about">
+      <div class="about-home">
+        <div class="overlay">
+          <h1>Welcome toVleikop Chartered and Accountant Inc.</h1>
+          <p>
+            Our vision is to be a leading African owned and managed accounting
+            firm that provides a <br />
+            platform for African excellence and world class competitiveness.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-info">
+        <h2>About Us</h2>
+
+        <p>
+          Vleikop Chartered Accountant . (“VCA”) is an indigenous black firm
+          founded in the Republic of South Africa. Our business activities are
+          focused on auditing, accounting, advisory and taxation services and
+          are not restricted in nature. VCA is a firm of Chartered Accountants
+          that provides technical advisory services to audit firms and
+          companies. These services include tax opinions, IFRS opinions as well
+          as in-house seminars. We are a young company looking to push the
+          boundaries of excellence and committed to delivering exceptional
+          service to its clients. Due to the size of our company, every client
+          gets special attention and is treated as if it is the only client. We
+          are also a certified level 1 BBBEE contributor and 100% Black owned
+          and managed. VCA provides innovative solutions to both public and
+          private sector clients including those listed on the Johannesburg
+          Stock Exchange.
+        </p>
+
+
+        <div class="services-tabs">
+          <div class="tabsGroup">
+            <div class="tabs active" onclick="openTab(this,'content_1')">
+              Our Values
+             
+            </div>
+            <div class="tabs" onclick="openTab(this,'content_2')">
+              Our Mission
+             
+            </div>
+            <div class="tabs" onclick="openTab(this,'content_3')">
+              Our Philosophy
+              
+            </div>
+          </div>
+
+          <div class="contentsGroup">
+            <div class="contents active" id="content_1">
+              <p>
+                VCA sets the benchmark in integrity, equality and professionalism;
+                and is driven to inspire new standards of excellence. A rich heritage
+                combined with robust leadership guides the firm in its vision,
+                mission, values and philosophy.
+
+                Part of VCA’s commitment to our staff is to equip them with the necessary
+                 tools (i.e. up-to-date technical knowledge, knowhow and best practice 
+                 information) to exceed client expectations. Training and development are 
+                 crucial components of the firm's employee practices and represents our
+                  continued investment in building corporate citizenship.
+                
+                The proven capabilities and strong focus on service delivery of VCA 
+                undoubtedly poises the firm for greater growth and industry prominence.
+              </p>
+            </div>
+            <div class="contents" id="content_2">
+            
+              <p>
+                To offer innovative, efficient, flexible and highly
+                 professional and competitive assurance and advisory solutions through:
+
+         <br>   • ensuring client’s needs are a company priority;
+                
+         <br>       • producing quality and excellent assurance and advisory work;
+                
+         <br>        • high level of staff competence and commitment;
+                
+         <br>         • strict compliance with professional standards
+              </p>
+            </div>
+            <div class="contents" id="content_3">
+            
+              <p>
+                VCA strives to create a service culture that permeates the 
+                entire firm. We aim to contribute towards the growth and 
+                development of our clients, staff and country, and consequently our
+                 own growth. We will ensure that the firm represents unity and a 
+                 shared vision among management and staff in line with the company's
+                  pillars of client and people centricity. <br> <br>
+
+                We intend to enhance transparency, accountability and proper 
+                compliance by emerging and growing businesses and government institutions.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+    <section id="our-team">
+      <div class="our-team">
+        <div class="our-team-text">
+          <h1>Our Team</h1>
+        </div>
+        <div class="our-members">
+          <div class="member">
+            <div class="position1">
+              <div class="number">1</div>
+              <h4>CEO:</h4>
+              <h2>Millicent Ngwasha Bcom</h2>
+            </div>
+            <div class="description">
+              <p>
+                (Accounting) (Unisa), Bcom. Hon (CTA) (Unisa) MFMA Cert (Wits)
+                NDip (Accounting) (UJ) : Millicent has over 10 years’ experience
+                in public sector finance management which she gained at various
+                municipalities and national departments. She is well versed in
+                the implementation of municipal GRAP, PFMA and MFMA. She has led
+                many teams in the implementation of MSCOA. She has been a
+                champion in process improvement that helped many municipalities
+                comply with section 7 grants requirements. She completed the
+                flagship Wits: Municipal Finance Programme and has been called
+                to give multiple training sessions to government finance teams.
+              </p>
+            </div>
+          </div>
+          <div class="member">
+            <div class="position2">
+              <div class="number">2</div>
+              <h4>Head of Accounting:</h4>
+              <h2>Nhlanhla Ngwasha</h2>
+            </div>
+            <div class="description">
+              <p>
+                CA(SA) Bcom(CTA) (Accounting) (Unisa) Nhlanhla has 7 
+                years experience of audit and financial management.
+                His key skills include IFRS and IFRS for SMME’s audit
+                file preparation and business process improvement. 
+                He is a registered tax practitioner and he has helped many 
+                businesses plan tax efficient structures.
+              </p>
+            </div>
+          </div>
+          <div class="member">
+            <div class="position3">
+              <div class="number">3</div>
+              <h4>Market ing Director </h4>
+              <h2>Douglas Ngwasha Bcom</h2>
+            </div>
+            <div class="description">
+              <p>
+                (Accounting) (Unisa) Douglas is responsible for distributing 
+                the Vleikop brand to the world. He has held many strategic 
+                leadership positions and currently sits as a non executive 
+                director for various companies. His key skills include
+                business reorganization, high performance leadership and
+                sales.
+              </p>
+            </div>
+          </div>
+          <div class="member">
+            <div class="position4">
+              <div class="number">4</div>
+              <h4>Human Resources Director:</h4>
+              <h2>Sikhulile Ngwasha Bphil</h2>
+            </div>
+            <div class="description">
+              <p>
+                ( Psychology) (Unisa)Sikhulile is responsible for the optimal used of our human 
+                capital. She is a psychologist by training. Her passion is the
+                empowerment and improvement of peoples lives. She has spent many 
+                years clinical practice and has been empowered with the skills to
+                deeply understand what helps people perform at their best.
+                
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>
+                Vleikop Chartered Accountant. (“VCA”) is an indigenous black
+                firm founded in the Republic of South Africa. Our business
+                activities are focused on auditing, accounting, advisory and
+                taxation services and are not restricted in nature.
+              </p>
+              <div class="social">
+                <a href=""><span class="fab fa-facebook-f"></span></a>
+                <a href="https://wa.link/5v5v6w"
+                  ><span class="fab fa-whatsapp"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <a href="https://goo.gl/maps/vyxKDAkXzGr4kFFq9">
+                  <span class="fas fa-map-marker-alt"></span
+                ></a>
+                <span class="text">593 Bengal street Centurion Laudium</span>
+              </div>
+              <div class="phone">
+                <a href="tel:0658572143">
+                  <span class="fas fa-phone-alt"></span
+                ></a>
+                <span class="text">+27 658 572 143</span>
+              </div>
+              <div class="email">
+                <a href="mailto:dmngwasha@gmail.com"
+                  ><span class="fas fa-envelope"></span
+                ></a>
+                <span class="text">douglas@vcaccs.co.za</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required />
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn1">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <center>
+            <span class="credit"
+              >Created By
+              <a href="https://www.somdeliegraphicdesign.co.za"
+                >SomdelieGraphics</a
+              >
+              |
+            </span>
+            <span class="far fa-copyright"></span
+            ><span> 2020 All rights reserved.</span>
+          </center>
+        </div>
+      </footer>
+    </section>
+
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script type="text/javascript">
+      function openTab(currentTab, currentContent) {
+        let allTabs = document.getElementsByClassName("tabs");
+        let allContents = document.getElementsByClassName("contents");
+        var currentContent = document.getElementById(currentContent);
+
+        for (let i = 0; i < allTabs.length; i++) {
+          allTabs[i].classList.remove("active");
+          allContents[i].classList.remove("active");
+        }
+        currentTab.classList.add("active");
+        currentContent.classList.add("active");
+      }
+    </script>
+  
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

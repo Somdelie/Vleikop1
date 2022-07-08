@@ -1,0 +1,360 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCA</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+  </head>
+  <body>
+
+
+    <style>
+
+:root {
+  --main-color: #2b8c9f;
+  --second-color: #2b8c9f;
+  --sub-color: #f63a28;
+  --text-color: #071c2f;
+}
+
+      .advisory-info{
+  width: 100%;
+  height: 40vh;
+  background-image: url("images/bg3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--text-color);
+
+
+}
+
+.advisory-info-text{
+  background-color: rgba(0, 0, 0, 0.514);
+  width: 100%;
+  height: 100%;
+  padding-left: 15%;
+  padding-top: 3rem;
+}
+
+.advisory-info h1{
+  font-size: 60px;
+  font-weight: 800;
+  color: #fff;
+  position: relative;
+  left: -100%;
+
+  animation: anim3 1s forwards 1s;
+}
+
+      .advisory-services{
+        padding-left: 15%;
+      }
+
+      .advisory-services h3{
+        position: relative;
+        left: -100%;
+        animation-delay: 2s;
+        animation: anim3 1s forwards 3s;
+      }
+
+      .advisory-services ul{
+        list-style: square;
+        flex: 1;
+        margin-right: 20px;
+      }
+
+      .advisory-services ul li{
+        color: var(--text-color);
+        font-size: medium;
+      }
+
+      .list1{
+        position: relative;
+        left: -120%;
+        animation-delay: 2s;
+        animation: anim3 1s forwards 5s;
+      }
+
+      .list2{
+        position: relative;
+        left: -120%;
+        animation-delay: 3s;
+        animation: anim3 1s forwards 6s;
+      }
+
+      .list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+
+        
+      }
+
+      #advisory{
+        width: 100%;
+        padding-top: 8%;
+        border-bottom: 1px solid var(--text-color);
+      }
+
+      .advisory-text{
+        margin-top: 2rem;
+        padding-left: 15%;
+      }
+
+      .advisory-text h2{
+        color: var(--main-color);
+        font-size: 29px;
+
+        position: relative;
+        left: -100%;
+        animation-delay: 2s;
+        animation: anim3 1s forwards 3s;
+      }
+
+      .advisory-text p{
+        font-size: 20px;
+        line-height: 4rem;
+        position: relative;
+        left: -118%;
+
+        animation-delay: 2s;
+        animation: anim3 1s forwards 4s;
+      }
+
+      .advisory-info .advisory-info-text p{
+        font-size: 25px;
+        line-height: 4rem;
+        color: #fff;
+        position: relative;
+        left: -122%;
+
+        animation-delay: 2s;
+        animation: anim3 1s forwards 2s;
+      }
+
+      @media screen and (max-width: 900px){
+  .advisory-info h1{
+    font-size: 30px;
+  }
+  .advisory-info .advisory-info-text p{
+    font-size: 18px;
+    line-height: 3rem;
+  }   
+  .advisory-text p{
+    line-height: 3rem;
+  }
+}
+
+    </style>
+
+    <div class="btn">
+      <span class="fas fa-bars"></span>
+    </div>
+    <nav class="navbar" id="sidebar">
+      <img src="images/VCA.png" alt="" />
+
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="audit.html">AUDIT</a></li>
+        <li><a href="accounting.html">ACCOUNTING</a></li>
+        <li><a href="tax.html">TAX</a></li>
+        <li class="active"><a href="advisory.html">ADVISORY</a></li>
+        <li><a href="b-bbee.html">B-BBEE</a></li>
+
+        <li>
+          <a href="#" class="feat-btn"
+            >MORE SERVICES
+            <span class="fas fa-caret-down first"></span>
+          </a>
+          <ul class="feat-show">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+
+          <ul class="feat-show2">
+            <li><a href="payroll.html">Payroll</a></li>
+            <li><a href="train.html">Training</a></li>
+            <li><a href="secretarial.html">Company Secretarial</a></li>
+          </ul>
+        </li>
+
+        <li><a href="careers.html">CAREERS</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-------Home Section-->
+
+    <section id="advisory">
+  
+
+      
+      <div class="advisory-info">
+        <div class="advisory-info-text">
+        <h1>Advisory</h1>
+        <p>
+          We assist in the structuring of commercial transactions <br> and advise on
+          corporate finance related issues.
+        </p>
+      </div>
+      </div>
+
+      <div class="advisory-text">
+        <h2>Advisory Services</h2>
+        <p>
+          We assist in the structuring of commercial transactions and advise on
+          corporate finance related issues. <br />
+          Our experience has given us a sound skills base to offer innovation
+          and creativity in devising unique financial solutions to a broad
+          spectrum of business.
+        </p>
+      </div>
+
+      <div class="advisory-services">
+        <h3>Full range of services includes:</h3>
+        <div class="list">
+          <ul class="list1">
+            <li>Cash flow predictions & Budgets</li>
+            <li>Revenue Management</li>
+            <li>Project and Contract Management</li>
+            <li>Governance and compliance</li>
+            <li>Performance improvement</li>
+            <li>Financial Function Effectiveness</li>
+            <li>Skills and Capacity building</li>
+            <li>Acquisitions, mergers and disposals</li>
+            <li>
+              Financial models and business plans (including model validation <br>
+              and reviews)
+            </li>
+          </ul>
+
+          <ul class="list2">
+            <li>Restructuring</li>
+            <li>Fixed Asset Management Activity Based Costing</li>
+            <li>Financial Management and Capital raising</li>
+            <li>Anti-corruption
+              </li>
+            <li>Due diligence investigations/reviews</li>
+            <li>Valuations of shares, members interest, equity interest <br> and debt</li>
+            <li>Corporate restructure</li>
+            <li>Fair and reasonable opinions</li>
+            <li>JSE advisory and listings</li>
+          </ul>
+        </div>
+    </div>
+    </section>
+
+    <section id="footer">
+      <footer>
+        <div class="main-content">
+          <div class="left box">
+            <h2>About us</h2>
+            <div class="content">
+              <p>
+                Vleikop Chartered Accountant. (“VCA”) is an
+                indigenous black firm founded in the Republic of South Africa.
+                Our business activities are focused on auditing, accounting,
+                advisory and taxation services and are not restricted in nature.
+              </p>
+              <div class="social">
+                <a href=""><span class="fab fa-facebook-f"></span></a>
+                <a href="https://wa.link/5v5v6w"
+                  ><span class="fab fa-whatsapp"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="center box">
+            <h2>Address</h2>
+            <div class="content">
+              <div class="place">
+                <a href="https://goo.gl/maps/vyxKDAkXzGr4kFFq9">
+                  <span class="fas fa-map-marker-alt"></span
+                ></a>
+                <span class="text">593 Bengal street Centurion Laudium</span>
+              </div>
+              <div class="phone">
+                <a href="tel:0658572143">
+                  <span class="fas fa-phone-alt"></span
+                ></a>
+                <span class="text">+27 658 572 143</span>
+              </div>
+              <div class="email">
+                <a href="mailto:dmngwasha@gmail.com"
+                  ><span class="fas fa-envelope"></span
+                ></a>
+                <span class="text">douglas@vcaccs.co.za</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="right box">
+            <h2>Contact us</h2>
+            <div class="content">
+              <form action="#">
+                <div class="email">
+                  <div class="text">Email *</div>
+                  <input type="email" required />
+                </div>
+                <div class="msg">
+                  <div class="text">Message *</div>
+                  <textarea rows="2" cols="25" required></textarea>
+                </div>
+                <div class="btn1">
+                  <button type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom">
+          <center>
+            <span class="credit"
+              >Created By
+              <a href="https://www.somdeliegraphicdesign.co.za"
+                >SomdelieGraphics</a
+              >
+              |
+            </span>
+            <span class="far fa-copyright"></span
+            ><span> 2020 All rights reserved.</span>
+          </center>
+        </div>
+      </footer>
+    </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
